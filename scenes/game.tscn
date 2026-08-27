@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://xiickm3g02wi" path="res://scenes/level1.tscn" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://g7k0dw4hf3pb" path="res://test/test_player.tscn" id="2_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://hlclfoosa5ks" path="res://assets/sprites/world_tileset.png" id="3_iywne"]
+[ext_resource type="PackedScene" uid="uid://dtj8pgnmg5cgx" path="res://scenes/platform.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://dj0onvfuj365t" path="res://scenes/ice_platform.tscn" id="5_iywne"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
 texture = ExtResource("3_iywne")
@@ -167,6 +169,121 @@ texture = ExtResource("3_iywne")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_p57ef")
 
+[sub_resource type="Animation" id="Animation_lbhrr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17, -56)]
+}
+
+[sub_resource type="Animation" id="Animation_iywne"]
+resource_name = "move"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17, -56), Vector2(54, -56)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p57ef"]
+_data = {
+&"RESET": SubResource("Animation_lbhrr"),
+&"move": SubResource("Animation_iywne")
+}
+
+[sub_resource type="Animation" id="Animation_gee14"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(242, -197)]
+}
+
+[sub_resource type="Animation" id="Animation_0tnpc"]
+resource_name = "up"
+length = 4.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.79, 2.36, 3.58, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(242, -197), Vector2(242, -380), Vector2(242, -380), Vector2(242, -184), Vector2(242, -197)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vtaks"]
+_data = {
+&"RESET": SubResource("Animation_gee14"),
+&"up": SubResource("Animation_0tnpc")
+}
+
+[sub_resource type="Animation" id="Animation_p57ef"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(538, -58)]
+}
+
+[sub_resource type="Animation" id="Animation_u5sy4"]
+resource_name = "up-down"
+length = 3.0333333
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.69, 2.15, 2.83),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(538, -58), Vector2(538, 71), Vector2(538, 71), Vector2(538, -53)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gee14"]
+_data = {
+&"RESET": SubResource("Animation_p57ef"),
+&"up-down": SubResource("Animation_u5sy4")
+}
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ge4e3"]
+
 [node name="Game" type="Node2D" unique_id=2040306663]
 
 [node name="level 1" parent="." unique_id=69404057 instance=ExtResource("1_lnu2h")]
@@ -174,5 +291,57 @@ sources/1 = SubResource("TileSetAtlasSource_p57ef")
 [node name="Test_Player" parent="level 1" unique_id=1426102884 instance=ExtResource("2_lbhrr")]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="level 1" unique_id=187728561]
-tile_map_data = PackedByteArray("AAD+////AQAAAAAAAAD/////AQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAD9////AQAAAAAAAAD8////AQAAAAAAAAD7////AQAAAAAAAAACAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAFAAAAAQAAAAAAAAAGAAAAAQAAAAEAAAAGAP//AQAAAAAAAAAHAP7/AQAAAAAAAAAIAP3/AQAAAAAAAAAIAP7/AQAAAAEAAAAHAP//AQAAAAEAAAAJAP3/AQAAAAAAAAAKAP3/AQAAAAAAAAALAP3/AQAAAAAAAAAMAP3/AQAAAAAAAAANAP3/AQAAAAAAAAAOAP7/AQAAAAAAAAAPAP7/AQAAAAAAAAAQAP7/AQAAAAAAAAACAPz/AQAAAAAAAAADAPz/AQAAAAAAAAAGAPr/AQAAAAAAAAAHAPr/AQAAAAAAAAASAP//AQAAAAAAAAATAAAAAQAAAAAAAAAUAAEAAQAAAAAAAAAVAAEAAQAAAAAAAAAWAAIAAQAAAAAAAAASAPv/AQAAAAAAAAARAPv/AQAAAAAAAAAVAPj/AQAAAAAAAAAUAPn/AQAAAAAAAAAXAAIAAQAAAAAAAAAYAAEAAQAAAAAAAAAZAAAAAQAAAAAAAAAaAP//AQAAAAEAAAAaAP7/AQAAAAAAAAAbAP3/AQAAAAAAAAAcAPz/AQAAAAAAAAD//wAAAQAAAAEAAAABAAEAAQAAAAEAAAASAAAAAQAAAAEAAAATAAEAAQAAAAEAAAAVAAIAAQAAAAEAAAAUAAIAAQAAAAEAAAARAAMAAQACAAAAAAAQAAMAAQACAAAAAAAPAAMAAQACAAAAAAAOAAMAAQACAAAAAAANAAMAAQACAAAAAAAMAAMAAQACAAAAAAALAAMAAQACAAAAAAAKAAMAAQACAAAAAAAJAAMAAQACAAAAAAAIAAMAAQACAAAAAAAHAAMAAQACAAAAAAAGAAMAAQACAAAAAAAFAAMAAQACAAAAAAAEAAMAAQACAAAAAAADAAMAAQACAAAAAAASAAMAAQACAAAAAAANAP7/AQAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAD+////AQAAAAAAAAD/////AQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAD9////AQAAAAAAAAD8////AQAAAAAAAAD7////AQAAAAAAAAACAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAFAAAAAQAAAAAAAAAGAAAAAQAAAAEAAAAGAP//AQAAAAAAAAAHAP7/AQAAAAAAAAAIAP3/AQAAAAAAAAAIAP7/AQAAAAEAAAAHAP//AQAAAAEAAAAJAP3/AQAAAAAAAAAKAP3/AQAAAAAAAAALAP3/AQAAAAAAAAAMAP3/AQAAAAAAAAANAP3/AQAAAAAAAAAOAP7/AQAAAAAAAAAPAP7/AQAAAAAAAAAQAP7/AQAAAAAAAAASAP//AQAAAAAAAAATAAAAAQAAAAAAAAAUAAEAAQAAAAAAAAAVAAEAAQAAAAAAAAAWAAIAAQAAAAAAAAAXAAIAAQAAAAAAAAAYAAEAAQAAAAAAAAAZAAAAAQAAAAAAAAAcAPz/AQAAAAAAAAD//wAAAQAAAAEAAAABAAEAAQAAAAEAAAASAAAAAQAAAAEAAAATAAEAAQAAAAEAAAAVAAIAAQAAAAEAAAAUAAIAAQAAAAEAAAANAP7/AQAAAAEAAAAaAP//AQAAAAEAAAAaAP7/AQAAAAEAAAAaAP3/AQAAAAEAAAAaAPz/AQAAAAAAAAAbAPz/AQAAAAAAAAAYAAIAAQAAAAEAAAAZAAEAAQAAAAEAAAAaAAAAAQAAAAEAAAARAOb/AQAGAAAAAAASAOb/AQAGAAAAAAATAOb/AQAGAAAAAAAUAOb/AQAGAAAAAAAVAOb/AQAGAAAAAAAWAOb/AQAGAAAAAAAMAOb/AQAGAAAAAAALAOb/AQAGAAAAAAAKAOb/AQAGAAAAAAAJAOb/AQAGAAAAAAAIAOb/AQAGAAAAAAAHAOb/AQAGAAAAAAAGAOb/AQAGAAAAAAAFAOb/AQAGAAAAAAADAAYAAQACAAIAAAAEAAYAAQACAAIAAAAFAAYAAQACAAIAAAAGAAYAAQACAAIAAAAKAAYAAQACAAIAAAALAAYAAQACAAIAAAAMAAYAAQACAAIAAAANAAYAAQACAAIAAAAOAAYAAQACAAIAAAAPAAYAAQACAAIAAAAQAAYAAQACAAIAAAARAAYAAQACAAIAAAASAAYAAQACAAIAAAATAAYAAQACAAIAAAAUAAYAAQACAAIAAAADAAEAAQAAAAAAAAARAP//AQAAAAAAAAAEAOb/AQALAAEAAAADAOb/AQAKAAEAAAACAOb/AQAKAAEAAAABAOb/AQAJAAEAAAAAAOb/AQAHAAEAAAD//+b/AQAHAAEAAAD5/+b/AQAIAAAAAAD0/+b/AQAIAAAAAAD0/+f/AQAIAAAAAAD0/+j/AQAIAAAAAAD0/+n/AQAIAAAAAAD0/+r/AQAIAAAAAAD0/+v/AQAIAAAAAAD0/+z/AQAIAAAAAAD0/+3/AQAIAAAAAAD0/+7/AQAIAAAAAAD0/+//AQAIAAAAAAD5/+f/AQAIAAAAAAD5/+j/AQAIAAAAAAD5/+n/AQAIAAAAAAD5/+r/AQAIAAAAAAD5/+v/AQAIAAAAAAD5/+z/AQAIAAAAAAD5/+3/AQAIAAAAAAD5/+7/AQAIAAAAAAD5/+//AQAIAAAAAAD5//D/AQAFAAEAAAD5//H/AQAFAAEAAAD5//L/AQAFAAEAAAD5//P/AQAFAAEAAAD5//T/AQAFAAEAAAD5//X/AQAFAAEAAAD5//b/AQAFAAEAAAD0//D/AQAFAAEAAAD0//H/AQAFAAEAAAD0//L/AQAFAAEAAAD0//P/AQAFAAEAAAD0//T/AQAFAAEAAAD0//X/AQAFAAEAAAD0//b/AQAFAAEAAAD0//f/AQAFAAEAAAD0//j/AQAFAAEAAAD5//f/AQAFAAEAAAD5//j/AQAFAAEAAAD5//n/AQABAAAAAAD5//r/AQABAAAAAAD5//v/AQABAAAAAAD5//z/AQABAAAAAAD5//3/AQABAAAAAAD5//7/AQABAAAAAAD5////AQABAAAAAAD5/wAAAQABAAAAAAD5/wEAAQABAAAAAAD0//n/AQABAAAAAAD0//r/AQABAAAAAAD0//v/AQABAAAAAAD0//z/AQABAAAAAAD0//3/AQABAAAAAAD0//7/AQABAAAAAAD0////AQABAAAAAAD0/wAAAQABAAAAAAD0/wEAAQABAAAAAAD0/wIAAQABAAAAAAD5/wIAAQADAAEAAAD5/wMAAQADAAEAAAD5/wQAAQADAAEAAAD5/wUAAQADAAEAAAD5/wYAAQADAAEAAAD5/wcAAQADAAEAAAD5/wgAAQADAAEAAAD5/wkAAQADAAEAAAD0/wMAAQADAAEAAAD0/wQAAQADAAEAAAD0/wUAAQADAAEAAAD0/wYAAQADAAEAAAD0/wcAAQADAAEAAAD0/wgAAQADAAEAAAD0/wkAAQADAAEAAAD0/woAAQADAAEAAAD0/w0AAQACAAIAAAD1/w0AAQAJAAEAAAD2/w0AAQAKAAEAAAD3/w0AAQAKAAEAAAD4/w0AAQALAAEAAAD5/w0AAQADAAAAAAD6/w0AAQADAAAAAAD7/w4AAQADAAAAAAD8/w4AAQADAAAAAAD9/w4AAQADAAAAAAD+/w0AAQADAAAAAAD//w0AAQADAAAAAAAAAA0AAQADAAAAAAABAA0AAQADAAAAAAACAA0AAQADAAAAAAADAA0AAQADAAAAAAADAAwAAQADAAAAAAADAAsAAQADAAAAAAAEAAsAAQADAAAAAAAFAAsAAQADAAAAAAAGAAsAAQADAAAAAAAGAAoAAQADAAAAAAAHAAoAAQADAAAAAAAIAAoAAQADAAAAAAAJAAoAAQADAAAAAAAKAAoAAQADAAAAAAALAAoAAQADAAAAAAA=")
 tile_set = SubResource("TileSet_ge4e3")
+
+[node name="platform" parent="level 1" unique_id=266473847 instance=ExtResource("4_lbhrr")]
+position = Vector2(17, -56)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="level 1/platform" unique_id=2036085803]
+libraries/ = SubResource("AnimationLibrary_p57ef")
+autoplay = &"move"
+
+[node name="platform2" parent="level 1" unique_id=760818122 instance=ExtResource("4_lbhrr")]
+position = Vector2(76, -116)
+
+[node name="platform3" parent="level 1" unique_id=676501772 instance=ExtResource("4_lbhrr")]
+position = Vector2(166, -155)
+
+[node name="platform4" parent="level 1" unique_id=762024472 instance=ExtResource("4_lbhrr")]
+position = Vector2(242, -197)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="level 1/platform4" unique_id=2008757025]
+libraries/ = SubResource("AnimationLibrary_vtaks")
+autoplay = &"up"
+
+[node name="platform5" parent="level 1" unique_id=92926256 instance=ExtResource("4_lbhrr")]
+position = Vector2(538, -58)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="level 1/platform5" unique_id=1905659219]
+libraries/ = SubResource("AnimationLibrary_gee14")
+autoplay = &"up-down"
+
+[node name="AnimatableBody2D" parent="level 1" unique_id=1378839994 instance=ExtResource("5_iywne")]
+position = Vector2(224, -411)
+
+[node name="AnimatableBody2D2" parent="level 1" unique_id=1025477403 instance=ExtResource("5_iywne")]
+position = Vector2(256, -411)
+
+[node name="AnimatableBody2D3" parent="level 1" unique_id=1462292749 instance=ExtResource("4_lbhrr")]
+position = Vector2(137.00002, 103)
+scale = Vector2(1.5144908, 1.5144908)
+
+[node name="Bottom_boundary" type="StaticBody2D" parent="." unique_id=957636314]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom_boundary" unique_id=1659316595]
+position = Vector2(267, 197)
+scale = Vector2(4.7999997, 1)
+shape = SubResource("WorldBoundaryShape2D_ge4e3")
+
+[node name="Left_boundary" type="StaticBody2D" parent="." unique_id=634094394]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left_boundary" unique_id=704866370]
+position = Vector2(-143, 17)
+rotation = 1.5646095
+scale = Vector2(1.9170127, 1)
+shape = SubResource("WorldBoundaryShape2D_ge4e3")
