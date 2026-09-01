@@ -338,6 +338,7 @@ _data = {
 
 [node name="player" parent="level 1" unique_id=1536122869 instance=ExtResource("2_iywne")]
 position = Vector2(12, -16)
+collision_layer = 2
 
 [node name="Camera2D" parent="level 1/player" index="2" unique_id=1178949587]
 zoom = Vector2(4, 4)
