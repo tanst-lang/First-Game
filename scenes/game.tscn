@@ -347,44 +347,83 @@ zoom = Vector2(4, 4)
 tile_map_data = PackedByteArray("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AADr//n/AQAGAAEAAADr//r/AQAGAAEAAADr//v/AQAGAAEAAADr//z/AQAGAAEAAADr//3/AQAGAAEAAADr//7/AQAGAAEAAADr////AQAGAAEAAADr/wAAAQAGAAEAAADr/wEAAQAGAAEAAADr/wIAAQAGAAEAAADr/wMAAQAGAAEAAADr/wQAAQAGAAEAAADr/wUAAQAGAAEAAADr/wYAAQAGAAEAAADr/wcAAQAGAAEAAADr/wgAAQAGAAEAAADr/wkAAQAGAAEAAADr/woAAQAGAAEAAADr/wsAAQAGAAEAAAD6//b/AQAAAAQAAAD6//f/AQAAAAQAAAD6//j/AQAAAAQAAAD6//n/AQAAAAQAAAD6//r/AQAAAAQAAAD6//v/AQAAAAQAAAD6//z/AQAAAAUAAAD6//3/AQAAAAAAAAD7//b/AQAAAAQAAAD7//f/AQAAAAQAAAD7//j/AQAAAAQAAAD7//n/AQAAAAQAAAD7//r/AQAAAAQAAAD7//v/AQAAAAQAAAD7//z/AQAAAAUAAAD7//3/AQAAAAAAAAD6//T/AQAAAAMAAAD6//X/AQAAAAQAAAD7//T/AQAAAAMAAAD7//X/AQAAAAQAAAD7//7/AQAAAAEAAAD6//7/AQAAAAEAAAD7////AQAAAAEAAAD8//7/AQAAAAAAAADr/wwAAQADAAAAAADs/wwAAQAJAAEAAADt/wwAAQAKAAEAAADu/wwAAQAKAAEAAADv/wwAAQALAAEAAADw/wwAAQADAAAAAADx/wwAAQADAAAAAADy/w0AAQADAAAAAADz/w0AAQADAAAAAAD0/w0AAQADAAAAAAD1/wwAAQADAAAAAAD2/wwAAQADAAAAAAD3/wwAAQADAAAAAAD4/wwAAQADAAAAAAD5/wwAAQADAAAAAAD6/wAAAQAFAAMAAAD6/wEAAQAFAAQAAAD6/wIAAQAFAAQAAAD6/wMAAQAFAAQAAAD6/wQAAQAFAAUAAAD6/wUAAQACAAIAAAD6/woAAQADAAAAAAD6/wsAAQADAAAAAAD6/wwAAQADAAAAAAD7/wUAAQACAAIAAAD7/woAAQADAAAAAAD8/wUAAQACAAIAAAD8/woAAQADAAAAAAD9/wUAAQACAAIAAAD9/wkAAQADAAAAAAD9/woAAQADAAAAAAD+/wkAAQADAAAAAAD//wkAAQADAAAAAAAAAAkAAQADAAAAAAABAAUAAQACAAIAAAABAAkAAQADAAAAAAACAAUAAQACAAIAAAACAAcAAQAFAAMAAAACAAgAAQAFAAUAAAACAAkAAQADAAAAAAADAAUAAQACAAIAAAAEAAUAAQACAAIAAAAFAAUAAQACAAIAAAAGAAUAAQACAAIAAAAHAAUAAQACAAIAAAAIAAUAAQACAAIAAAAJAAUAAQACAAIAAAAKAAUAAQACAAIAAAALAAUAAQACAAIAAAAMAAUAAQACAAIAAAANAAUAAQACAAIAAAAOAAUAAQACAAIAAAAPAAUAAQACAAIAAAAQAAUAAQACAAIAAAARAAUAAQACAAIAAAASAAUAAQACAAIAAAATAAUAAQACAAIAAAAUAAUAAQACAAIAAAAVAAUAAQACAAIAAAAWAAUAAQACAAIAAAAXAAUAAQACAAIAAAAYAAUAAQACAAIAAAA=")
 tile_set = SubResource("TileSet_ge4e3")
 
-[node name="platform" parent="level 1" unique_id=266473847 instance=ExtResource("4_lbhrr")]
+[node name="coin1" parent="level 1" unique_id=1854258345 instance=ExtResource("6_p57ef")]
+position = Vector2(56, 10)
+
+[node name="coin2" parent="level 1" unique_id=302284811 instance=ExtResource("6_p57ef")]
+position = Vector2(71, 10)
+
+[node name="coin3" parent="level 1" unique_id=937865339 instance=ExtResource("6_p57ef")]
+position = Vector2(153, -55)
+
+[node name="coin4" parent="level 1" unique_id=135455770 instance=ExtResource("6_p57ef")]
+position = Vector2(168, -55)
+
+[node name="coin5" parent="level 1" unique_id=250206455 instance=ExtResource("6_p57ef")]
+position = Vector2(185, -55)
+
+[node name="coin6" parent="level 1" unique_id=23792837 instance=ExtResource("6_p57ef")]
+position = Vector2(41, 73)
+
+[node name="coin7" parent="level 1" unique_id=1827973523 instance=ExtResource("6_p57ef")]
+position = Vector2(58, 73)
+
+[node name="coin8" parent="level 1" unique_id=740381757 instance=ExtResource("6_p57ef")]
+position = Vector2(74, 73)
+
+[node name="coin9" parent="level 1" unique_id=1519316865 instance=ExtResource("6_p57ef")]
+position = Vector2(-23, 135)
+
+[node name="coin10" parent="level 1" unique_id=1996619979 instance=ExtResource("6_p57ef")]
+position = Vector2(-7, 135)
+
+[node name="coin11" parent="level 1" unique_id=179023389 instance=ExtResource("6_p57ef")]
+position = Vector2(9, 135)
+
+[node name="platforms" type="Node" parent="." unique_id=823562216]
+
+[node name="underground_platform" parent="platforms" unique_id=1462292749 instance=ExtResource("4_lbhrr")]
+position = Vector2(-7.000004, 87.999985)
+scale = Vector2(1.5144908, 1.5144908)
+
+[node name="grass_platform" parent="platforms" unique_id=21560462 instance=ExtResource("7_u5sy4")]
+position = Vector2(56.5, 24)
+scale = Vector2(1.5, 1.5)
+
+[node name="platform3" parent="platforms" unique_id=676501772 instance=ExtResource("4_lbhrr")]
+position = Vector2(166, -155)
+
+[node name="ice_platform" parent="platforms" unique_id=1378839994 instance=ExtResource("5_iywne")]
+position = Vector2(224, -411)
+
+[node name="ice_platform2" parent="platforms" unique_id=1025477403 instance=ExtResource("5_iywne")]
+position = Vector2(256, -411)
+
+[node name="mving_platform1" parent="platforms" unique_id=266473847 instance=ExtResource("4_lbhrr")]
 position = Vector2(17, -56)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="level 1/platform" unique_id=2036085803]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platforms/mving_platform1" unique_id=2036085803]
 libraries/ = SubResource("AnimationLibrary_p57ef")
 autoplay = &"move"
 
-[node name="platform3" parent="level 1" unique_id=676501772 instance=ExtResource("4_lbhrr")]
-position = Vector2(166, -155)
-
-[node name="platform4" parent="level 1" unique_id=762024472 instance=ExtResource("4_lbhrr")]
+[node name="mving_platform2" parent="platforms" unique_id=762024472 instance=ExtResource("4_lbhrr")]
 position = Vector2(242, -197)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="level 1/platform4" unique_id=2008757025]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platforms/mving_platform2" unique_id=2008757025]
 libraries/ = SubResource("AnimationLibrary_vtaks")
 autoplay = &"up"
 
-[node name="platform5" parent="level 1" unique_id=92926256 instance=ExtResource("4_lbhrr")]
+[node name="mving_platform3" parent="platforms" unique_id=92926256 instance=ExtResource("4_lbhrr")]
 position = Vector2(538, -58)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="level 1/platform5" unique_id=1905659219]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platforms/mving_platform3" unique_id=1905659219]
 libraries/ = SubResource("AnimationLibrary_gee14")
 autoplay = &"up-down"
 
-[node name="ice_platform" parent="level 1" unique_id=1378839994 instance=ExtResource("5_iywne")]
-position = Vector2(224, -411)
-
-[node name="ice_platform2" parent="level 1" unique_id=1025477403 instance=ExtResource("5_iywne")]
-position = Vector2(256, -411)
-
-[node name="underground_platform" parent="level 1" unique_id=1462292749 instance=ExtResource("4_lbhrr")]
-position = Vector2(-7.0000005, 87.999985)
-scale = Vector2(1.5144908, 1.5144908)
-
-[node name="AnimatableBody2D" parent="level 1" unique_id=1349255427 instance=ExtResource("4_lbhrr")]
+[node name="mving_platform4" parent="platforms" unique_id=1349255427 instance=ExtResource("4_lbhrr")]
 position = Vector2(417, 85)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="level 1/AnimatableBody2D" unique_id=985306468]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platforms/mving_platform4" unique_id=985306468]
 libraries/ = SubResource("AnimationLibrary_dinhu")
 autoplay = &"underground_side"
 
@@ -402,15 +441,5 @@ position = Vector2(-368.00003, 9.000001)
 rotation = 1.5646095
 scale = Vector2(1.9170127, 1)
 shape = SubResource("WorldBoundaryShape2D_ge4e3")
-
-[node name="Area2D" parent="." unique_id=1854258345 instance=ExtResource("6_p57ef")]
-position = Vector2(56, 10)
-
-[node name="Area2D2" parent="." unique_id=302284811 instance=ExtResource("6_p57ef")]
-position = Vector2(71, 10)
-
-[node name="AnimatableBody2D" parent="." unique_id=21560462 instance=ExtResource("7_u5sy4")]
-position = Vector2(56.5, 24)
-scale = Vector2(1.5, 1.5)
 
 [editable path="level 1/player"]
