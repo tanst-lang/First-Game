@@ -423,13 +423,13 @@ position = Vector2(58, 73)
 position = Vector2(74, 73)
 
 [node name="coin9" parent="level 1/coins" unique_id=1519316865 instance=ExtResource("6_p57ef")]
-position = Vector2(-23, 135)
+position = Vector2(-23, 153)
 
 [node name="coin10" parent="level 1/coins" unique_id=1996619979 instance=ExtResource("6_p57ef")]
-position = Vector2(-7, 135)
+position = Vector2(-7, 153)
 
 [node name="coin11" parent="level 1/coins" unique_id=179023389 instance=ExtResource("6_p57ef")]
-position = Vector2(9, 135)
+position = Vector2(9, 153)
 
 [node name="enemies" type="Node" parent="level 1" unique_id=806786962]
 
