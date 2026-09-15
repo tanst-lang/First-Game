@@ -14,6 +14,10 @@ config/name="first-game"
 run/main_scene="uid://cedmiickrw1xt"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+EventBus="*uid://ei0muhxh34ft"
+
 [display]
 
 window/stretch/mode="canvas_items"
