@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://dvs0js51s4a22" path="res://scenes/grass_platform.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://c22t1sxu7gguo" path="res://scenes/killzone.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://di2kky6wkiwhy" path="res://scenes/slime.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cr4dgvbo5hx6p" path="res://scenes/hud.tscn" id="10_dinhu"]
+[ext_resource type="FontFile" uid="uid://crmi4dklspoy6" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="10_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://di8nm0wxxfhwd" path="res://scenes/pink_slime.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://dwv6td1i0opci" path="res://scenes/main_menu.tscn" id="11_kvuet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
 texture = ExtResource("3_iywne")
@@ -449,6 +453,20 @@ position = Vector2(267, 342)
 scale = Vector2(4.7999997, 1)
 shape = SubResource("WorldBoundaryShape2D_ge4e3")
 
+[node name="UI" type="CanvasLayer" parent="level 1" unique_id=535197531]
+
+[node name="HUD" parent="level 1/UI" unique_id=65128240 instance=ExtResource("10_dinhu")]
+
+[node name="main_menu" parent="level 1/UI" unique_id=662116320 instance=ExtResource("11_kvuet")]
+visible = false
+
+[node name="Label" type="Label" parent="level 1" unique_id=172558119]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.49966305, 0.35638168, 0.8102098, 1)
+theme_override_fonts/font = ExtResource("10_kvpfn")
+text = "Start"
+
 [node name="Left_boundary" type="StaticBody2D" parent="." unique_id=634094394]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left_boundary" unique_id=704866370]
@@ -456,5 +474,8 @@ position = Vector2(-368.00003, 9.000001)
 rotation = 1.5646095
 scale = Vector2(1.9170127, 1)
 shape = SubResource("WorldBoundaryShape2D_ge4e3")
+
+[node name="slime" parent="." unique_id=1478055 instance=ExtResource("10_vtaks")]
+position = Vector2(109, -428)
 
 [editable path="level 1/player"]
